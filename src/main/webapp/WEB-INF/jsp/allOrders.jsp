@@ -11,7 +11,7 @@
 <div class="container">
     <h3 align="center"><spring:message code="order.table_name"/></h3>
     <hr>
-    <form action="/distillers/orders/allFilter" method="get">
+    <form action="${pageContext.request.contextPath}/orders/allFilter" method="get">
         <div class="form-group">
             <label for="startDate"><spring:message code="order.form.start_date"/></label>
             <input type="date" value="${param.startDate}" name="startDate" class="form-control" id="startDate">

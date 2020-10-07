@@ -35,10 +35,10 @@
         </c:forEach>
     </table>
     <hr/>
-    <a class="btn btn-primary btn-mini" href="/distillers/users/add" role="button">
+    <a class="btn btn-primary btn-mini" href="${pageContext.request.contextPath}/users/add" role="button">
         <spring:message code="user.table.add_user"/>
     </a>
-    <a class="btn btn-primary btn-mini" href="/distillers/orders/all" role="button">
+    <a class="btn btn-primary btn-mini" href="${pageContext.request.contextPath}/orders/all" role="button">
         <spring:message code="user.table.all_orders_btn"/>
     </a>
 </div>

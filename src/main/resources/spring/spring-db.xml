@@ -15,32 +15,32 @@
     <!--    <jpa:repositories base-package="ru.buinovsky.**.repository.datajpa"/>-->
 
     <context:component-scan base-package="ru.buinovsky.**.repository.jpa"/>
-        <context:property-placeholder location="classpath:db/postgres.properties"/>
-<!--    <context:property-placeholder location="classpath:db/heroku.properties"/>-->
+<!--        <context:property-placeholder location="classpath:db/postgres.properties"/>-->
+    <context:property-placeholder location="classpath:db/heroku.properties"/>
 
     <jdbc:initialize-database data-source="dataSource" enabled="${database.init}">
         <jdbc:script location="classpath:db/initDB.sql"/>
         <jdbc:script encoding="utf-8" location="classpath:db/populateDB.sql"/>
     </jdbc:initialize-database>
 
-<!--    <bean class="java.net.URI" id="dbUrl">-->
-<!--        <constructor-arg value="${DATABASE_URL}"/>-->
-<!--    </bean>-->
-
-<!--    <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource">-->
-<!--        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }"/>-->
-<!--        <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>-->
-<!--        <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>-->
-<!--        <property name="driverClassName" value="org.postgresql.Driver"/>-->
-<!--    </bean>-->
+    <bean class="java.net.URI" id="dbUrl">
+        <constructor-arg value="${DATABASE_URL}"/>
+    </bean>
 
     <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource">
-        <!--        class="org.springframework.jdbc.datasource.DriverManagerDataSource"-->
-        <property name="driverClassName" value="${database.driverClassName}"/>
-        <property name="url" value="${database.url}"/>
-        <property name="username" value="${database.username}"/>
-        <property name="password" value="${database.password}"/>
+        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }"/>
+        <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
+        <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
+        <property name="driverClassName" value="org.postgresql.Driver"/>
     </bean>
+
+<!--    <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource">-->
+<!--        &lt;!&ndash;        class="org.springframework.jdbc.datasource.DriverManagerDataSource"&ndash;&gt;-->
+<!--        <property name="driverClassName" value="${database.driverClassName}"/>-->
+<!--        <property name="url" value="${database.url}"/>-->
+<!--        <property name="username" value="${database.username}"/>-->
+<!--        <property name="password" value="${database.password}"/>-->
+<!--    </bean>-->
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>

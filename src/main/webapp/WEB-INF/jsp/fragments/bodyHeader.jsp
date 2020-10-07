@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/distillers"><h5>Distillers</h5></a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/"><h5>Distillers</h5></a>
                 </li>
             </ul>
             <a class="btn btn-success my-2 my-sm-0" type="button" href="<c:url value="/logout"/>"><spring:message code="app.logout_btn"/></a>
