@@ -51,8 +51,8 @@
                 <td>${order.customerPhone}</td>
                 <td>${order.customerAddress}</td>
                 <td>${order.product.toString()}</td>
-                <td><a href="/distillers/orders/edit/${order.id}"><spring:message code="order.table.update"/></a></td>
-                <td><a href="/distillers/orders/delete/${order.id}"><spring:message code="order.table.delete"/></a></td>
+                <td><a href="${pageContext.request.contextPath}/orders/edit/${order.id}"><spring:message code="order.table.update"/></a></td>
+                <td><a href="${pageContext.request.contextPath}/orders/delete/${order.id}"><spring:message code="order.table.delete"/></a></td>
             </tr>
         </c:forEach>
     </table>

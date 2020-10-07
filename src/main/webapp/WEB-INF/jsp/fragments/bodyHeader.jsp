@@ -4,7 +4,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-        <a href="/distillers" class="navbar-brand"><img
+        <a href="${pageContext.request.contextPath}/" class="navbar-brand"><img
                 src="https://yt3.ggpht.com/a/AATXAJxLYGf2I6dqafE-OB3RByRlSk8Oh5HcCfitIg=s900-c-k-c0xffffffff-no-rj-mo"
                 alt="logo" width="30" height="30"/></a>
 

@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-sm"></div>
         <div class="col-sm">
-            <form:form action="/distillers/users/edit" method="post">
+            <form:form action="${pageContext.request.contextPath}/users/edit" method="post">
                 <c:if test="${!empty user.name}">
                     <input type="hidden" name="id" value="${user.id}">
                 </c:if>
