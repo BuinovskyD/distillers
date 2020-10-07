@@ -11,7 +11,7 @@
 <div class="container">
     <h3 align="center"><spring:message code="order.table_name"/></h3>
     <hr>
-    <form action="/distillers/orders/filter" method="get">
+    <form action="/orders/filter" method="get">
         <div class="form-group">
             <label for="startDate"><spring:message code="order.form.start_date"/></label>
             <input type="date" value="${param.startDate}" name="startDate" class="form-control" id="startDate">
@@ -27,7 +27,7 @@
     </form>
     <hr>
     <br>
-    <a class="btn btn-primary btn-mini my-2 my-sm-0" href="/distillers/orders/add" role="button">
+    <a class="btn btn-primary btn-mini my-2 my-sm-0" href="/orders/add" role="button">
         <spring:message code="order.form.add_order"/>
     </a>
     <br><br>
@@ -51,8 +51,8 @@
                 <td>${order.customerPhone}</td>
                 <td>${order.customerAddress}</td>
                 <td>${order.product.toString()}</td>
-                <td><a href="/distillers/orders/edit/${order.id}"><spring:message code="order.table.update"/></a></td>
-                <td><a href="/distillers/orders/delete/${order.id}"><spring:message code="order.table.delete"/></a></td>
+                <td><a href="/orders/edit/${order.id}"><spring:message code="order.table.update"/></a></td>
+                <td><a href="/orders/delete/${order.id}"><spring:message code="order.table.delete"/></a></td>
             </tr>
         </c:forEach>
     </table>

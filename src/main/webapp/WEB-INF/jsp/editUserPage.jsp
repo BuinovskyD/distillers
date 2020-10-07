@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-sm"></div>
         <div class="col-sm">
-            <form:form action="/distillers/users/edit" method="post">
+            <form:form action="/users/edit" method="post">
                 <c:if test="${!empty user.name}">
                     <input type="hidden" name="id" value="${user.id}">
                 </c:if>
@@ -49,7 +49,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-success"><spring:message code="app.from.save_btn"/></button>
-                <a class="btn btn-secondary" href="/distillers/users" role="button"><spring:message code="app.from.cancel_btn"/></a>
+                <a class="btn btn-secondary" href="/users" role="button"><spring:message code="app.from.cancel_btn"/></a>
             </form:form>
         </div>
         <div class="col-sm"></div>

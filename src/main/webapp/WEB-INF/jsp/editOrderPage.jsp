@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-sm"></div>
         <div class="col-sm">
-            <form:form action="/distillers/orders/edit" method="post">
+            <form:form action="/orders/edit" method="post">
                 <input type="hidden" name="id" value="${order.id}"/>
 
                 <div class="form-group">
@@ -57,7 +57,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-success"><spring:message code="app.from.save_btn"/></button>
-                <a class="btn btn-secondary" href="/distillers/orders" role="button"><spring:message
+                <a class="btn btn-secondary" href="/orders" role="button"><spring:message
                         code="app.from.cancel_btn"/></a>
             </form:form>
         </div>

@@ -22,11 +22,11 @@
     </p>
     <br>
     <sec:authorize access="hasAuthority('ADMIN')">
-        <a class="btn btn-primary btn-lg" href="/distillers/users" role="button">
+        <a class="btn btn-primary btn-lg" href="/users" role="button">
             <spring:message code="app.admin_panel_btn"/>
         </a>
     </sec:authorize>
-    <a class="btn btn-primary btn-lg" href="/distillers/orders" role="button">
+    <a class="btn btn-primary btn-lg" href="/orders" role="button">
         <spring:message code="app.user_panel_btn"/>
     </a>
 </div>

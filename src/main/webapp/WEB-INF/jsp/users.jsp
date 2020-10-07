@@ -17,7 +17,6 @@
             <th scope="col"><spring:message code="user.table.name"/></th>
             <th scope="col"><spring:message code="user.table.email"/></th>
             <th scope="col"><spring:message code="user.table.role"/></th>
-<%--            <th scope="col"></th>--%>
             <th scope="col"></th>
             <th scope="col"></th>
         </tr>
@@ -28,17 +27,16 @@
                 <td>${user.name}</td>
                 <td><a href="mailto:${user.email}">${user.email}</a></td>
                 <td>${user.role.toString()}</td>
-<%--                <td><a href="/distillers/orders/${user.id}"><spring:message code="user.table.orders"/></a></td>--%>
-                <td><a href="/distillers/users/edit/${user.id}"><spring:message code="user.table.update"/></a></td>
-                <td><a href="/distillers/users/delete/${user.id}"><spring:message code="user.table.delete"/></a></td>
+                <td><a href="/users/edit/${user.id}"><spring:message code="user.table.update"/></a></td>
+                <td><a href="/users/delete/${user.id}"><spring:message code="user.table.delete"/></a></td>
             </tr>
         </c:forEach>
     </table>
     <hr/>
-    <a class="btn btn-primary btn-mini" href="/distillers/users/add" role="button">
+    <a class="btn btn-primary btn-mini" href="/users/add" role="button">
         <spring:message code="user.table.add_user"/>
     </a>
-    <a class="btn btn-primary btn-mini" href="/distillers/orders/all" role="button">
+    <a class="btn btn-primary btn-mini" href="/orders/all" role="button">
         <spring:message code="user.table.all_orders_btn"/>
     </a>
 </div>
