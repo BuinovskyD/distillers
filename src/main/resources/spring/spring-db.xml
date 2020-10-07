@@ -25,11 +25,11 @@
 
     <!--Connecting to DB on Heroku-->
     <bean class="java.net.URI" id="dbUrl">
-        <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
+        <constructor-arg value="${DATABASE_URL}"/>
     </bean>
 
     <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource">
-        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
+        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }"/>
         <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
         <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
         <property name="driverClassName" value="org.postgresql.Driver"/>
