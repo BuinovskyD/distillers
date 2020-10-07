@@ -49,7 +49,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-success"><spring:message code="app.from.save_btn"/></button>
-                <a class="btn btn-secondary" href="${pageContext.request.contextPath}/users" role="button"><spring:message code="app.from.cancel_btn"/></a>
+                <a class="btn btn-secondary" href="/distillers/users" role="button"><spring:message code="app.from.cancel_btn"/></a>
             </form:form>
         </div>
         <div class="col-sm"></div>

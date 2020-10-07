@@ -57,7 +57,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-success"><spring:message code="app.from.save_btn"/></button>
-                <a class="btn btn-secondary" href="${pageContext.request.contextPath}/orders" role="button"><spring:message
+                <a class="btn btn-secondary" href="/distillers/orders" role="button"><spring:message
                         code="app.from.cancel_btn"/></a>
             </form:form>
         </div>

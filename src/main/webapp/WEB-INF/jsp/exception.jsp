@@ -11,7 +11,7 @@
     <h3><spring:message code="app.error"/></h3>
     <p>${exception.message}</p>
     <br>
-    <a class="btn btn-primary btn-mini" href="${pageContext.request.contextPath}/" role="button"><spring:message code="app.home_btn"/></a>
+    <a class="btn btn-primary btn-mini" href="/distillers" role="button"><spring:message code="app.home_btn"/></a>
 
     <!--
     <c:forEach items="${exception.stackTrace}" var="ste">
